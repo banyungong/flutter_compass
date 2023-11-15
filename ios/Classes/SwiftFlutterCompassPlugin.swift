@@ -14,7 +14,7 @@ public class SwiftFlutterCompassPlugin: NSObject, FlutterPlugin, FlutterStreamHa
     init(channel: FlutterEventChannel) {
         super.init()
         location.delegate = self
-        location.headingFilter = 0.1;
+        location.headingFilter = 3;
         channel.setStreamHandler(self);
 
         motion.deviceMotionUpdateInterval = 1.0 / 30.0;
